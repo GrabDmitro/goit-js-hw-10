@@ -17,7 +17,7 @@ refs.inputRef.addEventListener(
   debounce(() => {
     clearRender(refs);
 
-    fetchCountry(refs.inputRef.value).then(countries => {
+    fetchCountry(refs.inputRef.value.trim()).then(countries => {
       renderCountry(countries, refs);
     });
   }, DEBOUNCE_DELAY)

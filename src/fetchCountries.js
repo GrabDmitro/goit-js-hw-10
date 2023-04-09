@@ -3,11 +3,11 @@ export default function (countryName) {
   return fetch(
     `https://restcountries.com/v3.1/name/${countryName}?fields=name,capital,population,languages,flags`
   )
-    .then(r => {
-      if (!r.ok) {
+    .then(result => {
+      if (!result.ok) {
         throw new Error(responce.status);
       }
-      return r.json();
+      return result.json();
     })
     .then(countries => {
       return countries;
