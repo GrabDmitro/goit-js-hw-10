@@ -16,15 +16,14 @@ refs.inputRef.addEventListener(
   `input`,
   debounce(() => {
     clearRender(refs);
-    console.log(refs.inputRef.value);
+
     fetchCountry(refs.inputRef.value).then(countries => {
       renderCountry(countries, refs);
     });
   }, DEBOUNCE_DELAY)
 );
-//console.log(renderCountry(a));
+
 function clearRender(refs) {
   refs.listRef.innerHTML = '';
   refs.infoRef.innerHTML = '';
-  console.log('s');
 }

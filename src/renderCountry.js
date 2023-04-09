@@ -35,6 +35,6 @@ function renderItem(array, refs) {
         </li>`;
     }
   );
-  // console.log(newHtml);
+
   refs.listRef.insertAdjacentHTML('beforeend', newHtml.join(''));
 }
